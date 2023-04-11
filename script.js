@@ -108,10 +108,8 @@ function showCards(cards) {
         if(!ro){
             choose.style.display = "flex";
         allArray.push(role);
-    
         showButtons();
         let filtered = arrayFilt();
-    
         showCards(filtered); 
         }
     });
@@ -125,7 +123,6 @@ function showCards(cards) {
 
     showButtons();
     let filtered = arrayFilt();
-
     showCards(filtered); 
     }
   
@@ -146,7 +143,6 @@ function showCards(cards) {
         if(!eng){
             choose.style.display = "flex";
         allArray.push(languages[en]);
-
         showButtons();
         let filtered = arrayFilt();
 
