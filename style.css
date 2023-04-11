@@ -5,9 +5,73 @@ body {
     background: #EFFAFA;
     box-sizing: border-box;
 }
-
+main{
+    padding-bottom: 150px;
+}
 header {
     background-color: #5CA5A5;
+    height: 156px;
+}
+.dgreen{
+    display: none;
+}
+.clearfilter{
+    display: flex;
+    flex-wrap: wrap;
+    gap:16px;
+}
+.clearfilters{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.filters{
+    margin-top:20px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+.clear{
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.123077px;
+    color: #7C8F8F;
+    background-color: #FFFFFF;
+    border:none;
+    display: block;
+}
+.filtclear{
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+    border-radius: 5px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-top: -37px;
+}
+.close{
+    background: #5CA5A5;
+border-radius: 0px 4px 4px 0px;
+padding:9px;
+font-family: 'League Spartan';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: -0.123077px;
+
+color: #7C8F8F;
+}
+.mgreen{
+    display: block;
+    width: 100%;
     height: 156px;
 }
 
@@ -17,11 +81,12 @@ header {
     background: #FFFFFF;
     box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
     border-radius: 5px;
-    margin: 54px 24px 40px 24px;
-    padding-left: 19px;
+    margin: 54px 24px -14px 24px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
-.newfeatured {
+.nefeatured {
     display: flex;
     align-items: center;
     gap: 33px;
@@ -60,7 +125,7 @@ header {
     margin-left: -25px;
 }
 
-.new {
+.fresh {
     font-family: 'League Spartan';
     font-style: normal;
     font-weight: 700;
@@ -99,8 +164,28 @@ header {
     color: #7C8F8F;
     margin-top: -20px;
 }
-
+.longevity{
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+.filtercard{
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.123077px;
+    background-color: rgba(92, 165, 165, 0.1);
+    border: none;
+    color: #5CA5A5;
+    border-radius: 4px;
+    padding: 5px 10px 3px 10px;
+}
 .dot {
+    display: block;
     background: #B7C4C4;
     height: 4px;
     width: 4px;
@@ -109,7 +194,7 @@ header {
 .line {
     background: #B7C4C4;
     height: 1px;
-    width: 279px;
+    width: 100%;
 }
 
 .buttonall {
@@ -123,49 +208,6 @@ header {
 
 }
 
-.frontend {
-    font-family: 'League Spartan';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.123077px;
-    color: #5CA5A5;
-    border-radius: 4px;
-    border: none;
-    padding: 0px 12px 0px 9px;
-    background-color: rgba(92, 165, 165, 0.1);
-    
-}
-
-.senior {
-    font-family: 'League Spartan';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.123077px;
-    color: #5CA5A5;
-    mix-blend-mode: normal;
-    border-radius: 4px;
-    background-color: rgba(92, 165, 165, 0.1);
-    border: none;
-    padding: 5px 11px 3px 9px;
-}
-
-.html {
-    font-family: 'League Spartan';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.123077px;
-    background-color: rgba(92, 165, 165, 0.1);
-    border: none;
-    color: #5CA5A5;
-    padding: 7px 9.5px 4px 9.5px;
-    border-radius: 4px;
-}
 
 .btnall {
     font-family: 'League Spartan';
@@ -182,17 +224,117 @@ header {
     
 
 }
-
-.javascript {
-    font-family: 'League Spartan';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.123077px;
-    background-color: rgba(92, 165, 165, 0.1);
-    border: none;
-    color: #5CA5A5;
-    border-radius: 4px;
-    padding: 5px 9px 3px 8px;
+.btnall:hover{
+    background: #5CA5A5;
+    color: #FFFFFF;;
 }
+.remove:hover{
+    background: #2B3939;
+}
+.fitercard{
+    background-color: rgba(92, 165, 165, 0.1);
+    padding: 5px 10px 3px 10px;
+    
+}
+.option{
+    display: flex;
+    width: fit-content;
+
+}
+.remove{
+    background: #5CA5A5;
+    border-radius: 0px 4px 4px 0px;
+    padding:9px;
+}
+.removebutton{
+    background: #FFFFFF;
+    box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+    border-radius: 5px;
+    margin: -17px 24px -14px 24px;
+    padding: 20px 25px 20px 19px;
+    position: relative;
+    flex-wrap: wrap;
+    gap:16px;
+  
+}
+.removefilt{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (min-width: 1440px)  {
+    
+    main{
+        padding-bottom: 120px;
+ 
+    }
+
+.mgreen{
+    display: none;
+}
+.dgreen{
+    display: block;
+}
+.removebutton{
+    background: #FFFFFF;
+    box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+    border-radius: 5px;
+    margin: -33px 165px 24px 165px;
+    padding: 20px 25px 20px 19px;
+    position: relative;
+    flex-wrap: wrap;
+    gap:16px;
+}
+.line{
+    display: none;
+}
+.cardphoto{
+    margin-top: 56px;
+    margin-left: 21px;
+    width: 88px;
+
+}
+.soft{
+    margin-left:140px;
+    margin-top: -130px;
+}
+.buttonall{
+    justify-content: flex-end;
+    padding-right: 40px;
+    padding-bottom:59px;
+    margin-top: -83px;
+}
+.card{
+    margin: 24px 165px 24px 165px;
+}
+.take{
+    font-size: 18px;
+    line-height: 17px;
+}
+.developer{
+    font-size: 22px;
+    line-height: 24px;
+}
+.info{
+    font-size: 18px;
+line-height: 24px;
+letter-spacing: -0.138462px;
+gap:18px;
+margin-top: -25px;
+
+}
+.new{
+    margin-left: -20px;
+}
+.featured{
+    margin-left:-23px;
+    padding: 7px 9px 5px 8px;
+}
+
+}
+
+
+
+
+
+
