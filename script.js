@@ -38,10 +38,7 @@ function showButtons() {
       if (allArray.length === 0) {
         choose.style.display = "none";
       }
-    //   allArray.map((allbtn)=>{
-    //     if(allbtn=== btnall )
-    //   })
-     
+   
       let filtered = arrayFilt();
       showCards(filtered);
     });
@@ -104,29 +101,27 @@ function showCards(cards) {
     const allbutton = creatComponent("div", "buttonall");
     const roleS = creatComponent("button", "btnall", role);
     roleS.addEventListener("click", function () {
-        let ro = allArray.includes(role)
-        if(!ro){
-            choose.style.display = "flex";
+      let ro = allArray.includes(role);
+      if (!ro) {
+        choose.style.display = "flex";
         allArray.push(role);
         showButtons();
         let filtered = arrayFilt();
-        showCards(filtered); 
-        }
+        showCards(filtered);
+      }
     });
 
     const levels = creatComponent("button", "btnall", level);
     levels.addEventListener("click", function () {
-    let lev = allArray.includes(level)
-    if(!lev){
+      let lev = allArray.includes(level);
+      if (!lev) {
         choose.style.display = "flex";
-    allArray.push(level);
+        allArray.push(level);
 
-    showButtons();
-    let filtered = arrayFilt();
-    showCards(filtered); 
-    }
-  
-    
+        showButtons();
+        let filtered = arrayFilt();
+        showCards(filtered);
+      }
     });
 
     allbutton.append(roleS, levels);
@@ -138,18 +133,15 @@ function showCards(cards) {
       allbutton.append(lang);
       lang.textContent = languages[en];
       lang.addEventListener("click", function () {
+        let eng = allArray.includes(languages[en]);
+        if (!eng) {
+          choose.style.display = "flex";
+          allArray.push(languages[en]);
+          showButtons();
+          let filtered = arrayFilt();
 
-         let eng = allArray.includes(languages[en])
-        if(!eng){
-            choose.style.display = "flex";
-        allArray.push(languages[en]);
-        showButtons();
-        let filtered = arrayFilt();
-
-        showCards(filtered); 
+          showCards(filtered);
         }
-      
-        
       });
     }
 
@@ -159,16 +151,17 @@ function showCards(cards) {
       tool.textContent = tools[t];
 
       tool.addEventListener("click", function () {
-       eng = allArray.includes(tools[t])
-        if(!eng){
-            choose.style.display = "flex";
-        allArray.push(tools[t]);
+        eng = allArray.includes(tools[t]);
+        if (!eng) {
+          choose.style.display = "flex";
+          allArray.push(tools[t]);
 
-        showButtons();
-        let filtered = arrayFilt();
+          showButtons();
+          let filtered = arrayFilt();
 
-        showCards(filtered); 
-        }})
+          showCards(filtered);
+        }
+      });
     }
 
     jobBox.append(photo, member, positionElement, time, line, allbutton);
